@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1024">
+    <title>Product Page</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+
+    <style>
+        /* reset padding, margin, box sizing and font family*/
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            font-family: "Inter Tight", sans-serif;
+        }
+
+        body {
+            margin: 0 auto;
+        }
+
+        section {
+            padding: 3rem;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4 {
+            color: #161723;
+        }
+
+        p,
+        h1,
+        h2,
+        h3,
+        h4,
+        span {
+            letter-spacing: .5px;
+        }
+
+        p {
+            line-height: 24px;
+            color: #424153;
+            font-size: 16px;
+        }
+
+        h1,
+        h2 {
+            font-size: 40px;
+        }
+
+        span {
+            font-size: 13px;
+        }
+
+        /* Hero Section */
+        .hero {
+            /* text-align: center; */
+            margin-bottom: 80px;
+        }
+
+        .hero h1 {
+            font-size: 40px;
+            margin-bottom: 50px;
+            font-weight: 600;
+            max-width: 536px;
+            text-align: center;
+            margin: 0 auto;
+            line-height: 48px;
+        }
+
+        .features-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin: 60px 0;
+            gap: 30px;
+        }
+
+        .features {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+
+        .feature {
+            display: flex;
+            align-items: flex-start;
+            gap: 16px;
+            padding: 0;
+        }
+
+        .feature p {
+            font-size: 16px;
+            font-weight: 400;
+        }
+
+        .feature h3 {
+            font-size: 19px;
+            color: #161723;
+            font-weight: 600;
+            letter-spacing: .5px;
+            line-height: 28.5px;
+        }
+
+        .feature img {
+            width: 48px;
+            height: 48px;
+            margin-bottom: 0;
+            flex-shrink: 0;
+        }
+
+        .feature-text {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .product-image {
+            width: 400px;
+            height: 400px;
+            margin: 0;
+        }
+
+        .cta-button {
+            background: #EE6F4B;
+            color: white;
+            padding: 15px 30px;
+            border-radius: 6px;
+            text-decoration: none;
+            display: block;
+            margin-bottom: 20px;
+            font-weight: 500;
+            width: 462px;
+            max-width: 462px;
+            text-align: center;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .payment-info {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 6px;
+            color: #666;
+        }
+
+        /* Stats Section */
+        .nutrition {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            margin: 100px 0;
+            align-items: center;
+            background: #F8F8F8;
+        }
+
+        .stats h2 {
+            font-size: 36px;
+            margin-bottom: 10px;
+        }
+
+        .stat {
+            margin-bottom: 10px;
+            margin-top: 10px;
+            display: flex;
+            gap: 48px;
+            padding-top: 1rem;
+        }
+
+        .stat-number {
+            color: #EE6F4B;
+            font-size: 32px;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+
+        .stats-inner {
+            margin-top: 30px;
+        }
+
+        .stats-inner .stat + .stat {
+            border-top: 1px solid #E3E3E8;
+        }
+
+        .stats .cta {
+            width: 100%;
+            margin-top: 30px;
+        }
+
+        .stats .cta-button {
+            width: 100%;
+            max-width: 100%;
+        }
+
+        .stats-inner h4 {
+            font-size: 19px;
+            line-height: 28.5px;
+            font-weight: 600;
+        }
+        /* Additional sections */
+        .benefits {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            margin: 100px 0;
+            align-items: center;
+        }
+
+        .benefits img {
+            width: 100%;
+            border-radius: 10px;
+        }
+
+        .benefits h2 {
+            margin-bottom: 20px;
+        }
+
+        .benefits p {
+            color: #666;
+        }
+
+        .benefits h2, .benefits p {
+            max-width: 538px;
+            width: 538px;
+        }
+    </style>
+</head>
+
+<body>
+    <section class="hero">
+        <h1>What makes us different makes them stronger</h1>
+
+        <div class="features-container">
+            <div class="features">
+                <div class="feature">
+                    <img src="/images/food.svg" alt="Real Food">
+                    <div class="feature-text">
+                        <h3>Real Food</h3>
+                        <p>Wholesome recipes for dogs with real meat and veggies.</p>
+                    </div>
+                </div>
+                <div class="feature">
+                    <img src="/images/pet-bowl 1.svg" alt="Premium Ingredient">
+                    <div class="feature-text">
+                        <h3>Premium Ingredient</h3>
+                        <p>Ensuring pet care with unmatched safety and quality.</p>
+                    </div>
+                </div>
+            </div>
+
+            <img src="/images/dogfood.png" alt="Premium Dog Food" class="product-image">
+
+            <div class="features">
+                <div class="feature">
+                    <img src="/images/pet-food 1.svg" alt="Made Fresh">
+                    <div class="feature-text">
+                        <h3>Made Fresh</h3>
+                        <p>We prioritize maintaining the integrity of whole foods and nutrition.</p>
+                    </div>
+                </div>
+                <div class="feature">
+                    <img src="/images/vet 1.svg" alt="Vet Developed">
+                    <div class="feature-text">
+                        <h3>Vet Developed</h3>
+                        <p>We raise the bar for dog nutrition, surpassing industry expectations.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="cta">
+            <a href="#" class="cta-button">Get your dog's healthy meal today!</a>
+
+            <div class="payment-info">
+                <img src="/images/shield-check.svg" alt="">
+                <span> 30-day money back guarantee</span>
+                <img src="/images/Payments.png" alt="Payment Methods">
+            </div>
+        </div>
+    </section>
+
+    <section class="nutrition">
+        <div class="stats">
+            <h2>Nutrition is the foundation for longer, healthier lives in dogs.</h2>
+            <p>Invest in your dog's future with our scientifically formulated superfood-powered supplements. Give them
+                the nutrition they deserve and watch them thrive with vitality, energy, and the joy of a longer,
+                healthier life.</p>
+
+            <div class="stats-inner">
+                <h4>Key Points:</h4>
+                <div class="stat">
+                    <div class="stat-number">97%</div>
+                    <p>Dogs choose our dog food over leading brands because of its real functional
+                        ingredients and delicious flavor.</p>
+                </div>
+
+                <div class="stat">
+                    <div class="stat-number">84%</div>
+                    <p>Our dog food provides superior nutrition and a patented probiotic for optimal
+                        nutrient absorption.</p>
+                </div>
+
+                <div class="stat">
+                    <div class="stat-number">92%</div>
+                    <p>Our dog food's high protein and fat digestibility contributes to ideal stool
+                        quality.</p>
+                </div>
+            </div>
+            <div class="cta">
+                <a href="#" class="cta-button">Give your furry friend the gift of wholesome nutrition</a>
+            </div>
+        </div>
+        <img src="/images/nutritious-dog.png" alt="Happy Dog with Product">
+    </section>
+
+    <section class="benefits">
+        <img src="/images/dogseating.png" alt="Dogs Eating">
+        <div>
+            <h2>Improve overall gastrointestinal health for better nutrient absorption</h2>
+            <p>Through rigorous scientific studies and consultations with veterinarians, we have created a breakthrough
+                formula exclusively tailored to combat the health challenges prevalent in dogs. A staggering 91% of our
+                customers have reported significant improvements in their dog's health after incorporating our product
+                into their diet.</p>
+        </div>
+    </section>
+
+    <section class="benefits">
+        <div>
+            <h2>Prebiotics nourish the beneficial gut bacteria, supporting digestive health</h2>
+            <p>Our dog food formula contains carefully selected prebiotics that work in harmony with the gut microbiota,
+                providing the necessary nutrients for the growth and maintenance of beneficial bacteria, ultimately
+                supporting digestive health.</p>
+        </div>
+        <img src="/images/dogfood.png" alt="Kibble Closeup">
+    </section>
+</body>
+
+</html>
